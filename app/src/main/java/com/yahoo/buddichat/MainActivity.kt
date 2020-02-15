@@ -14,11 +14,6 @@ import kotlin.math.log
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -26,24 +21,8 @@ class MainActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         register_button_register.setOnClickListener {
-            val email = email_edittext_register.text.toString()
-            val password = password_edittext_register.text.toString()
-
-            Log.d("MainActivity", "Email is " + email)
-            Log.d("MainActivity", "Password: $password")
-            auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        Log.d("MainActivity", "createUserWithEmail:success")
-                        val user = auth.currentUser
-                    } else {
-                        Log.w("MainActivity", "createUserWithEmail:failure", task.exception)
-                        Toast.makeText(baseContext, "User Already Exists.",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                }
-
+            performRegister()
+        }
             already_have_account_textview.setOnClickListener {
                 Log.d("LoginActivity", "Try to show login activity")
 
@@ -52,5 +31,34 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+    private fun performRegister() {
+        val email = email_edittext_register.text.toString()
+        val password = password_edittext_register.text.toString()
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this,
+                "Please enter text in email and password",
+                Toast.LENGTH_SHORT)
+                .show()
+            return
+        }
+
+        Log.d("MainActivity", "Email is " + email)
+        Log.d("MainActivity", "Password: $password")
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    Log.d("Main", "createUserWithEmail:success")
+                    val user = auth.currentUser
+                } else {
+                    Log.w("Main", "createUserWithEmail:failure",
+                        task.exception)
+                    Toast.makeText(
+                        baseContext, "Failed to create user.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
     }
+
 }

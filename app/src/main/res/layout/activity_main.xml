@@ -8,20 +8,40 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/username_edittext_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_edittext_register_login"
+        android:ems="10"
+        android:hint="@string/username"
+        android:paddingLeft="16dp"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/email_edittext_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
         android:id="@+id/email_edittext_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
+        android:autofillHints=""
+        android:background="@drawable/rounded_edittext_register_login"
         android:ems="10"
         android:hint="@string/email_register"
+        android:paddingLeft="16dp"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username_edittext_register"
-        android:autofillHints="" tools:targetApi="o" />
+        tools:targetApi="o" />
 
     <EditText
         android:id="@+id/password_edittext_register"
@@ -30,31 +50,15 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
+        android:background="@drawable/rounded_edittext_register_login"
         android:ems="10"
         android:hint="@string/password_register"
+        android:paddingLeft="16dp"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email_edittext_register"
         android:autofillHints="" tools:targetApi="o" />
-
-    <EditText
-        android:id="@+id/username_edittext_register"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
-        android:ems="10"
-        android:hint="@string/username"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/email_edittext_register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/register_button_register"
@@ -63,6 +67,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="48dp"
+        android:background="@drawable/rounded_button"
         android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
