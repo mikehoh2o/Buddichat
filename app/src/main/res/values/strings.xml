@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">buddichat</string>
+    <string name="app_name">Buddichat</string>
     <string name="username">Username</string>
     <string name="email_register">Email</string>
     <string name="password_register">Password</string>
