@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">buddichat</string>
+    <string name="username">Username</string>
+    <string name="email_register">Email</string>
+    <string name="password_register">Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="register">Register</string>
+    <string name="email_login">Email</string>
+    <string name="password_login">Password</string>
+    <string name="login">Login</string>
+    <string name="back_to_register_account">Back to register account</string>
+</resources>

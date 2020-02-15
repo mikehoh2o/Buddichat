@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "976060646566",
+    "firebase_url": "https://buddichat-dec54.firebaseio.com",
+    "project_id": "buddichat-dec54",
+    "storage_bucket": "buddichat-dec54.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976060646566:android:cbdac5469955273786a067",
+        "android_client_info": {
+          "package_name": "com.yahoo.buddichat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "976060646566-lre7fqc4ul8ff4caitakj8kbtkpolc1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkgwyw3a2s7-iJ7sRlja0_0gURsA4itzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "976060646566-lre7fqc4ul8ff4caitakj8kbtkpolc1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
